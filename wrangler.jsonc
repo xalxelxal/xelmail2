@@ -15,7 +15,7 @@
 // gitignored `.dev.vars`.
 {
     "$schema": "./node_modules/wrangler/config-schema.json",
-    "name": "mail2telegram",
+    "name": "xelmail2",
     "main": "packages/server/src/index.ts",
     // From this date Workers enables nodejs_compat and nodejs_compat_v2 by
     // default, so no compatibility_flags are needed — adding them would be
@@ -49,15 +49,15 @@
     "d1_databases": [
         {
             "binding": "DB",
-            "database_name": "mail2telegram",
-            "database_id": "fe7ceafb-d5e0-4786-9a68-ec57e844a4eb",
+            "database_name": "xelmail2",
+                    "database_id": "dd77961a-0fb1-4556-8c6d-7cab868d6756",
             "migrations_dir": "packages/server/migrations"
         }
     ],
     "r2_buckets": [
         {
             "binding": "BUCKET",
-            "bucket_name": "mail2telegram","preview_bucket_name": "mail2telegram"
+            "bucket_name": "xelmail2","preview_bucket_name": "xelmail2"
         }
     ],
     "ai": {
