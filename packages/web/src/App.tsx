@@ -17,7 +17,6 @@ import { AppProvider } from './AppContext';
 import { MessageReader } from './components/ios/MessageReader';
 import { useAsync } from './hooks/useAsync';
 import { useMediaQuery } from './hooks/useMediaQuery';
-import { useDarkMode } from './hooks/useTheme';
 import { isTelegramEnvironment } from './init';
 import { MessageTabBar } from './layout/TabBar';
 import { InboxPage } from './pages/InboxPage';
@@ -211,7 +210,8 @@ function ComposeRoute() {
 }
 
 function AppInner() {
-    const dark = useDarkMode();
+    // Selalu gelap — background jaring partikel (#050816) hanya terlihat di mode gelap.
+    const dark = true;
     const [params, setParams] = useSearchParams();
     const { data, loading, error, reload } = useAsync<MeResponse>(() => api.me(), []);
 
