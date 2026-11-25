@@ -1741,3 +1741,26 @@ body {
         animation: none;
     }
 }
+
+/* Jaring partikel (plexus) ala panel D33MzVPNs — latar #050816.
+   Kanvas menempel di belakang aplikasi; di mode gelap, latar grup aplikasi
+   dibuat transparan supaya partikel terlihat di sela-sela kartu. */
+#bg-net {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+#root {
+    position: relative;
+    z-index: 1;
+}
+.dark html,
+.dark body {
+    background: #050816;
+}
+.dark .k-app {
+    background: transparent;
+}
